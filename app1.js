@@ -27,9 +27,31 @@ be 0-254-6-8 */
 console.log(hyphenated.join('')); 
  
 // Challenge 3
-/*  */
- 
- 
+/* Write a JavaScript program that accepts an array input from a user and finds the most
+frequent item in the array.
+Sample array : const arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+Sample Output : a ( 5 times ) */
+
+alert("The following program finds the most frequent item in an the array");
+var arr1 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]
+var mf = 1;
+var m = 0;
+var item;
+for (let i=0; i<arr1.length; i++)
+{
+        for (let j=i; j<arr1.length; j++)
+        {
+                if (arr1[i] == arr1[j])
+                 m++;
+                if (mf<m)
+                {
+                  mf=m; 
+                  item = arr1[i];
+                }
+        }
+        m=0;
+}
+alert(`${item} (${mf} times)`);
  
  
  
